@@ -4,7 +4,7 @@ import mysql.connector  # For database connection
 import os
 
 app = Flask(__name__)
-app.secret_key = os.getenv('FLASK_SECRET_KEY', 'your_default_secret_key')
+app.secret_key = os.getenv('FLASK_SECRET_KEY', 'my_secret_key_for_development')
 
 # Database Connection Function
 def get_db_connection():
