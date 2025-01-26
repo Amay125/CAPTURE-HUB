@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/homepage.css">
+    <title>CaptureHub - Homepage</title>
+</head>
+<body>
+    <!-- Header with Navigation Bar -->
+    <header>
+        <h1>Welcome to CaptureHub</h1>
+        <nav>
+            <a href="/cinematography">Cinematography Cameras</a>
+            <a href="/camera">Cameras</a>
+            <a href="/lens">Lenses</a>
+            <a href="/accessories">Accessories</a>
+            <a href="/cart">Cart</a>
+            {% if 'user_id' in session %}
+                <a href="/dashboard">Dashboard</a>
+                <a href="/logout">Logout</a>
+            {% else %}
+                
+                <a href="/admin_login">Admin Login</a>
+            {% endif %}
+    </header>
+
+    <!-- Carousel Section -->
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-item" onclick="location.href='/cinematography'">
+                <img src="https://images.unsplash.com/photo-1536632087471-3cf3f2986328?q=80&w=1776&auto=format&fit=crop" alt="Cinematography Cameras">
+            </div>
+            <div class="carousel-item" onclick="location.href='/lens'">
+                <img src="https://plus.unsplash.com/premium_photo-1711136677946-27ffc2a8cf7b?q=80&w=2070&auto=format&fit=crop" alt="Lenses">
+            </div>
+            <div class="carousel-item" onclick="location.href='/accessories'">
+                <img src="https://images.unsplash.com/photo-1516724562728-afc824a36e84?q=80&w=2071&auto=format&fit=crop" alt="Accessories">
+            </div>
+        </div>
+        <button class="prev" onclick="moveCarousel(-1)">❮</button>
+        <button class="next" onclick="moveCarousel(1)">❯</button>
+    </div>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h2>About CaptureHub</h2>
+        <p>CaptureHub is your one-stop destination for all things photography and videography. We offer a wide range of cameras, lenses, accessories, and more to meet all your creative needs.</p>
+        <button onclick="showMore()">Learn More</button>
+        <div class="extra-info">
+            <p>We provide high-quality gear for professionals and enthusiasts alike. Our mission is to help you capture moments in the best way possible.</p>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Banner -->
+    <div class="cta-banner">
+        <h2>Limited Time Offer!</h2>
+        <p>Save up to 50% on select products. Hurry, offer ends soon!</p>
+        <button onclick="location.href='/camera'">Shop Now</button>
+    </div>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <h2>Why Choose CaptureHub?</h2>
+        <video controls>
+            <source src="/static/videos/capturehub-overview.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="customer-reviews">
+        <h2>What Our Customers Say</h2>
+        <div class="reviews-container">
+            <div class="review">
+                <p>"CaptureHub has the best collection of cameras. I found exactly what I needed!"</p>
+                <span>- Alex J.</span>
+            </div>
+            <div class="review">
+                <p>"The customer service was amazing, and the delivery was super fast."</p>
+                <span>- Maria P.</span>
+            </div>
+            <div class="review">
+                <p>"I love the lenses I bought from here. Highly recommend CaptureHub!"</p>
+                <span>- Ravi S.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (if needed) -->
+    <footer>
+        <p>&copy; 2024 CaptureHub. All rights reserved.</p>
+    </footer>
+
+    <!-- Carousel Script -->
+    <script>
+        let index = 0;
+
+        function moveCarousel(direction) {
+            const container = document.querySelector('.carousel-container');
+            const items = document.querySelectorAll('.carousel-item');
+            const totalItems = items.length;
+
+            index = (index + direction + totalItems) % totalItems;
+            container.style.transform = `translateX(-${index * 100}%)`;
+        }
+    </script>
+</body>
+</html>

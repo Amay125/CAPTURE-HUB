@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories - Capture Hub</title>
+    <link rel="stylesheet" href="/static/accessories.css">
+</head>
+<body>
+    <header>
+        <h1>Accessories</h1>
+        <a href="/">Back to Homepage</a>
+    </header>
+
+    <main>
+        <!-- SD Cards Section -->
+        <section>
+            <h2>SD Cards</h2>
+            <div class="accessory-container">
+                <div class="accessory-box">
+                    <img src="static/images/sdcard1.jpg" alt="SanDisk SD Card">
+                    <h3>SanDisk 32GB SD Card</h3>
+                    <p>High-speed data transfer for cameras.</p>
+                    <p class="price">₹1,200</p>
+                    <form action="/add_to_cart" method="post">
+                        <input type="hidden" name="product_id" value="1">
+                        <input type="hidden" name="name" value="SanDisk 32GB SD Card">
+                        <input type="hidden" name="price" value="1200">
+                        <input type="hidden" name="image" value="static/images/sdcard1.jpg">
+                        <button type="submit">Add to Cart</button>
+                    </form>
+                </div>
+                <div class="accessory-box">
+                    <img src="static/images/sdcard2.jpg" alt="Samsung SD Card">
+                    <h3>Samsung 64GB SD Card</h3>
+                    <p>Ultra-fast speed and reliability.</p>
+                    <p class="price">₹1,800</p>
+                    <form action="/add_to_cart" method="post">
+                        <input type="hidden" name="product_id" value="2">
+                        <input type="hidden" name="name" value="Samsung 64GB SD Card">
+                        <input type="hidden" name="price" value="1800">
+                        <input type="hidden" name="image" value="static/images/sdcard2.jpg">
+                        <button type="submit">Add to Cart</button>
+                    </form>
+                </div>
+                <div class="accessory-box">
+                    <img src="static/images/sdcard3.jpg" alt="Lexar SD Card">
+                    <h3>Lexar 128GB SD Card</h3>
+                    <p>Perfect for professional photographers.</p>
+                    <p class="price">₹3,000</p>
+                    <form action="/add_to_cart" method="post">
+                        <input type="hidden" name="product_id" value="3">
+                        <input type="hidden" name="name" value="Lexar 128GB SD Card">
+                        <input type="hidden" name="price" value="3000">
+                        <input type="hidden" name="image" value="static/images/sdcard3.jpg">
+                        <button type="submit">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Add similar forms for other products -->
+    
+    
+
+        <!-- Memory Cards Section -->
+<section>
+    <h2>Memory Cards</h2>
+    <div class="accessory-container">
+        <div class="accessory-box">
+            <img src="static/images/memorycard1.jpg" alt="Sony Memory Card">
+            <h3>Sony 64GB Memory Card</h3>
+            <p>Fast and secure storage for all devices.</p>
+            <p class="price">₹1,500</p>
+            <form action="/add_to_cart" method="post">
+                <input type="hidden" name="product_id" value="101">
+                <input type="hidden" name="name" value="Sony 64GB Memory Card">
+                <input type="hidden" name="price" value="1500">
+                <input type="hidden" name="image" value="static/images/memorycard1.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+        <div class="accessory-box">
+            <img src="static/images/memorycard2.jpg" alt="Kingston Memory Card">
+            <h3>Kingston 128GB Memory Card</h3>
+            <p>Reliable storage for daily use.</p>
+            <p class="price">₹2,500</p>
+            <form action="/add_to_cart" method="post">
+                <input type="hidden" name="product_id" value="102">
+                <input type="hidden" name="name" value="Kingston 128GB Memory Card">
+                <input type="hidden" name="price" value="2500">
+                <input type="hidden" name="image" value="static/images/memorycard2.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Tripods Section -->
+<section>
+    <h2>Tripods</h2>
+    <div class="accessory-container">
+        <div class="accessory-box">
+            <img src="static/images/tripod1.jpg" alt="Lightweight Tripod">
+            <h3>Lightweight Travel Tripod</h3>
+            <p>Compact and portable for outdoor shoots.</p>
+            <p class="price">₹4,500</p>
+            <form action="/add_to_cart" method="post">
+                <input type="hidden" name="product_id" value="201">
+                <input type="hidden" name="name" value="Lightweight Travel Tripod">
+                <input type="hidden" name="price" value="4500">
+                <input type="hidden" name="image" value="static/images/tripod1.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+        <div class="accessory-box">
+            <img src="static/images/tripod2.jpg" alt="Professional Tripod">
+            <h3>Professional Aluminum Tripod</h3>
+            <p>Durable and stable for studio use.</p>
+            <p class="price">₹7,000</p>
+            <form action="/add_to_cart" method="post">
+                <input type="hidden" name="product_id" value="202">
+                <input type="hidden" name="name" value="Professional Aluminum Tripod">
+                <input type="hidden" name="price" value="7000">
+                <input type="hidden" name="image" value="static/images/tripod2.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Camera Bags Section -->
+<section>
+    <h2>Camera Bags</h2>
+    <div class="accessory-container">
+        <div class="accessory-box">
+            <img src="static/images/camerabag1.jpg" alt="Camera Bag">
+            <h3>Waterproof Camera Bag</h3>
+            <p>Spacious and durable for all camera gear.</p>
+            <p class="price">₹2,200</p>
+            <form action="/add_to_cart" method="post">
+                <input type="hidden" name="product_id" value="301">
+                <input type="hidden" name="name" value="Waterproof Camera Bag">
+                <input type="hidden" name="price" value="2200">
+                <input type="hidden" name="image" value="static/images/camerabag1.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+        <div class="accessory-box">
+            <img src="static/images/camerabag2.jpg" alt="Sling Bag">
+            <h3>Compact Sling Bag</h3>
+            <p>Lightweight and perfect for travel.</p>
+            <p class="price">₹1,800</p>
+            <form action="/add_to_cart" method="post">
+                <input type="hidden" name="product_id" value="302">
+                <input type="hidden" name="name" value="Compact Sling Bag">
+                <input type="hidden" name="price" value="1800">
+                <input type="hidden" name="image" value="static/images/camerabag2.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+</section>

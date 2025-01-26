@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/lens.css">
+    <title>Lenses - CaptureHub</title>
+</head>
+<body>
+    <header>
+        <h1>Explore Our Lens Collection</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/camera">Cameras</a>
+            <a href="/accessories">Accessories</a>
+            <a href="/cart">Cart</a>
+        </nav>
+    </header>
+
+    
+
+
+    <main>
+       <!-- Price Range: ₹20,000 and Below -->
+<div class="price-range">
+    <h3>₹20,000 and Below</h3>
+    <div class="lens-container">
+        <div class="lens-box">
+            <img src="/static/images/len1.jpg" alt="50mm Lens">
+            <h3>50mm f/1.8 Prime Lens</h3>
+            <p>Ideal for portraits with stunning background blur.</p>
+            <p class="price">₹19,999</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="1">
+                <input type="hidden" name="name" value="50mm f/1.8 Prime Lens">
+                <input type="hidden" name="price" value="19999">
+                <input type="hidden" name="image" value="/static/images/lens1.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+        <div class="lens-box">
+            <img src="/static/images/len2.png" alt="18-55mm Lens">
+            <h3>18-55mm f/3.5-5.6 Lens</h3>
+            <p>Perfect all-around lens for casual photography.</p>
+            <p class="price">₹15,999</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="2">
+                <input type="hidden" name="name" value="18-55mm f/3.5-5.6 Lens">
+                <input type="hidden" name="price" value="15999">
+                <input type="hidden" name="image" value="/static/images/lens2.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+        <div class="lens-box">
+            <img src="/static/images/len3.png" alt="35mm Lens">
+            <h3>35mm f/2.8 Lens</h3>
+            <p>Compact and sharp, ideal for street photography.</p>
+            <p class="price">₹17,500</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="3">
+                <input type="hidden" name="name" value="35mm f/2.8 Lens">
+                <input type="hidden" name="price" value="17500">
+                <input type="hidden" name="image" value="/static/images/lens3.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Price Range: ₹40,000 and Below -->
+<div class="price-range">
+    <h3>₹40,000 and Below</h3>
+    <div class="lens-container">
+        <div class="lens-box">
+            <img src="/static/images/len4.png" alt="24-70mm Lens">
+            <h3>24-70mm f/2.8 Zoom Lens</h3>
+            <p>Versatile lens for landscapes, portraits, and events.</p>
+            <p class="price">₹38,000</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="4">
+                <input type="hidden" name="name" value="24-70mm f/2.8 Zoom Lens">
+                <input type="hidden" name="price" value="38000">
+                <input type="hidden" name="image" value="/static/images/lens4.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+        <div class="lens-box">
+            <img src="/static/images/len5.png" alt="70-200mm Lens">
+            <h3>70-200mm f/4 Telephoto Lens</h3>
+            <p>Great for wildlife and sports photography.</p>
+            <p class="price">₹39,999</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="5">
+                <input type="hidden" name="name" value="70-200mm f/4 Telephoto Lens">
+                <input type="hidden" name="price" value="39999">
+                <input type="hidden" name="image" value="/static/images/lens5.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Price Range: ₹70,000 and Below -->
+<div class="price-range">
+    <h3>₹70,000 and Below</h3>
+    <div class="lens-container">
+        <div class="lens-box">
+            <img src="/static/images/len6.png" alt="16-35mm Lens">
+            <h3>16-35mm f/2.8 Ultra-Wide Zoom</h3>
+            <p>Perfect for landscapes and architecture.</p>
+            <p class="price">₹59,999</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="6">
+                <input type="hidden" name="name" value="16-35mm f/2.8 Ultra-Wide Zoom">
+                <input type="hidden" name="price" value="59999">
+                <input type="hidden" name="image" value="/static/images/lens6.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+        <div class="lens-box">
+            <img src="/static/images/len7.png" alt="85mm Lens">
+            <h3>85mm f/1.4 Portrait Lens</h3>
+            <p>Stunning bokeh and sharp portraits.</p>
+            <p class="price">₹65,000</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="7">
+                <input type="hidden" name="name" value="85mm f/1.4 Portrait Lens">
+                <input type="hidden" name="price" value="65000">
+                <input type="hidden" name="image" value="/static/images/lens7.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Price Range: ₹1,00,000 and Below -->
+<div class="price-range">
+    <h3>₹1,00,000 and Below</h3>
+    <div class="lens-container">
+        <div class="lens-box">
+            <img src="/static/images/len8.png" alt="24mm Lens">
+            <h3>24mm f/1.4 Wide-Angle Lens</h3>
+            <p>Exceptional low-light performance and clarity.</p>
+            <p class="price">₹89,999</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="8">
+                <input type="hidden" name="name" value="24mm f/1.4 Wide-Angle Lens">
+                <input type="hidden" name="price" value="89999">
+                <input type="hidden" name="image" value="/static/images/lens8.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+        <div class="lens-box">
+            <img src="/static/images/len9.png" alt="35mm Lens">
+            <h3>35mm f/1.2 Lens</h3>
+            <p>Wide aperture for low-light photography.</p>
+            <p class="price">₹95,000</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="9">
+                <input type="hidden" name="name" value="35mm f/1.2 Lens">
+                <input type="hidden" name="price" value="95000">
+                <input type="hidden" name="image" value="/static/images/lens9.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+          <!-- Price Range: ₹1,50,000 and Below -->
+<div class="price-range">
+    <h3>₹1,50,000 and Below</h3>
+    <div class="lens-container">
+        <div class="lens-box">
+            <img src="/static/images/len10.png" alt="70-200mm Lens">
+            <h3>70-200mm f/2.8 Professional Telephoto</h3>
+            <p>Perfect for sports and wildlife photography.</p>
+            <p class="price">₹1,49,999</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="10">
+                <input type="hidden" name="name" value="70-200mm f/2.8 Professional Telephoto">
+                <input type="hidden" name="price" value="149999">
+                <input type="hidden" name="image" value="/static/images/lens10.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+        <div class="lens-box">
+            <img src="/static/images/len11.png" alt="14-24mm Lens">
+            <h3>14-24mm f/2.8 Ultra-Wide</h3>
+            <p>Capture breathtaking landscapes with minimal distortion.</p>
+            <p class="price">₹1,40,000</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="11">
+                <input type="hidden" name="name" value="14-24mm f/2.8 Ultra-Wide">
+                <input type="hidden" name="price" value="140000">
+                <input type="hidden" name="image" value="/static/images/lens11.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Price Range: ₹2,00,000 and Below -->
+<div class="price-range">
+    <h3>₹2,00,000 and Below</h3>
+    <div class="lens-container">
+        <div class="lens-box">
+            <img src="/static/images/len12.png" alt="85mm Lens">
+            <h3>85mm f/1.2 Prime Lens</h3>
+            <p>Exceptional sharpness and background blur.</p>
+            <p class="price">₹1,89,999</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="12">
+                <input type="hidden" name="name" value="85mm f/1.2 Prime Lens">
+                <input type="hidden" name="price" value="189999">
+                <input type="hidden" name="image" value="/static/images/lens12.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+        <div class="lens-box">
+            <img src="/static/images/len13.png" alt="300mm Lens">
+            <h3>300mm f/4 Telephoto Lens</h3>
+            <p>Designed for professional wildlife photographers.</p>
+            <p class="price">₹1,95,000</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="13">
+                <input type="hidden" name="name" value="300mm f/4 Telephoto Lens">
+                <input type="hidden" name="price" value="195000">
+                <input type="hidden" name="image" value="/static/images/lens13.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+            <!-- Price Range: ₹2,50,000 and Below -->
+<div class="price-range">
+    <h3>₹2,50,000 and Below</h3>
+    <div class="lens-container">
+        <div class="lens-box">
+            <img src="/static/images/len14.png" alt="400mm Lens">
+            <h3>400mm f/2.8 Super Telephoto</h3>
+            <p>Engineered for sports and action photography.</p>
+            <p class="price">₹2,49,999</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="14">
+                <input type="hidden" name="name" value="400mm f/2.8 Super Telephoto">
+                <input type="hidden" name="price" value="249999">
+                <input type="hidden" name="image" value="/static/images/lens14.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+        <div class="lens-box">
+            <img src="/static/images/len15.png" alt="600mm Lens">
+            <h3>600mm f/4 Professional Telephoto</h3>
+            <p>Extreme reach for capturing distant subjects.</p>
+            <p class="price">₹2,50,000</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="15">
+                <input type="hidden" name="name" value="600mm f/4 Professional Telephoto">
+                <input type="hidden" name="price" value="250000">
+                <input type="hidden" name="image" value="/static/images/lens15.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Most Popular Lenses -->
+<section class="popular-lenses">
+    <h2>Most Popular Lenses</h2>
+    <div class="lens-container">
+        <!-- Lens 1 -->
+        <div class="lens-box interactive">
+            <img src="/static/images/len16.png" alt="50mm Lens">
+            <h3>50mm f/1.8 Prime Lens</h3>
+            <p>Ideal for portraits with stunning background blur.</p>
+            <p class="price">₹19,999</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="1">
+                <input type="hidden" name="name" value="50mm f/1.8 Prime Lens">
+                <input type="hidden" name="price" value="19999">
+                <input type="hidden" name="image" value="/static/images/len16.png">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Lens 2 -->
+        <div class="lens-box interactive">
+            <img src="/static/images/len17.png" alt="24-70mm Lens">
+            <h3>24-70mm f/2.8 Zoom Lens</h3>
+            <p>A versatile lens for landscapes, portraits, and events.</p>
+            <p class="price">₹89,999</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="2">
+                <input type="hidden" name="name" value="24-70mm f/2.8 Zoom Lens">
+                <input type="hidden" name="price" value="89999">
+                <input type="hidden" name="image" value="/static/images/len17.png">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Lens 3 -->
+        <div class="lens-box interactive">
+            <img src="/static/images/lens3.jpg" alt="70-200mm Lens">
+            <h3>70-200mm f/2.8 Telephoto Lens</h3>
+            <p>Perfect for wildlife, sports, and event photography.</p>
+            <p class="price">₹1,49,999</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="3">
+                <input type="hidden" name="name" value="70-200mm f/2.8 Telephoto Lens">
+                <input type="hidden" name="price" value="149999">
+                <input type="hidden" name="image" value="/static/images/lens3.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Lens 4 -->
+        <div class="lens-box interactive">
+            <img src="/static/images/lens4.jpg" alt="100mm Macro Lens">
+            <h3>100mm f/2.8 Macro Lens</h3>
+            <p>Great for close-up shots with incredible detail.</p>
+            <p class="price">₹55,999</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="4">
+                <input type="hidden" name="name" value="100mm f/2.8 Macro Lens">
+                <input type="hidden" name="price" value="55999">
+                <input type="hidden" name="image" value="/static/images/lens4.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Lens 5 -->
+        <div class="lens-box interactive">
+            <img src="/static/images/lens5.jpg" alt="16-35mm Lens">
+            <h3>16-35mm f/4 Wide-Angle Lens</h3>
+            <p>Excellent for architecture and landscape photography.</p>
+            <p class="price">₹74,999</p>
+            <form method="POST" action="/add_to_cart">
+                <input type="hidden" name="product_id" value="5">
+                <input type="hidden" name="name" value="16-35mm f/4 Wide-Angle Lens">
+                <input type="hidden" name="price" value="74999">
+                <input type="hidden" name="image" value="/static/images/lens5.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/camera.css">
+    <title>Cameras</title>
+</head>
+<body>
+    <header>
+        <h1>Cameras</h1>
+        <a href="/">Back to Homepage</a>
+    </header>
+
+    <!-- Limited Time Offer Section -->
+    <section class="limited-offer">
+        <h2>Limited Time Offers on Cameras</h2>
+        <div class="camera-container">
+    
+            <!-- Camera 1 -->
+            <div class="camera-item">
+                <img src="/static/images/camera1.jpg" alt="Canon EOS 90D">
+                <p class="camera-title">Canon EOS 90D</p>
+                <p>32.5MP, 4K Video, Dual Pixel Autofocus</p>
+                <p class="camera-price"><span class="discount">₹1,29,999</span> ₹1,14,999</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="product_id" value="001">
+                    <input type="hidden" name="name" value="Canon EOS 90D">
+                    <input type="hidden" name="price" value="114999">
+                    <input type="hidden" name="image" value="static/images/camera1.jpg">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+    
+            <!-- Camera 2 -->
+            <div class="camera-item">
+                <img src="/static/images/camera2.jpg" alt="Sony Alpha a7 III">
+                <p class="camera-title">Sony Alpha a7 III</p>
+                <p>24.2MP, Full-frame, Real-Time Eye AF</p>
+                <p class="camera-price"><span class="discount">₹1,79,999</span> ₹1,59,999</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="product_id" value="002">
+                    <input type="hidden" name="name" value="Sony Alpha a7 III">
+                    <input type="hidden" name="price" value="159999">
+                    <input type="hidden" name="image" value="static/images/camera2.jpg">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+    
+            <!-- Camera 3 -->
+            <div class="camera-item">
+                <img src="/static/images/camera3.webp" alt="Nikon Z50">
+                <p class="camera-title">Nikon Z50</p>
+                <p>20.9MP, Compact Mirrorless, 4K Video</p>
+                <p class="camera-price"><span class="discount">₹89,999</span> ₹79,999</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="product_id" value="003">
+                    <input type="hidden" name="name" value="Nikon Z50">
+                    <input type="hidden" name="price" value="79999">
+                    <input type="hidden" name="image" value="static/images/camera3.jpg">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+    
+            <!-- Camera 4 -->
+            <div class="camera-item">
+                <img src="/static/images/camera4.jpg" alt="Fujifilm X-T4">
+                <p class="camera-title">Fujifilm X-T4</p>
+                <p>26.1MP, In-Body Stabilization, 4K/60fps Video</p>
+                <p class="camera-price"><span class="discount">₹1,54,999</span> ₹1,39,999</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="product_id" value="004">
+                    <input type="hidden" name="name" value="Fujifilm X-T4">
+                    <input type="hidden" name="price" value="139999">
+                    <input type="hidden" name="image" value="static/images/camera4.jpg">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+    
+            <!-- Camera 5 -->
+            <div class="camera-item">
+                <img src="/static/images/camera5.jpg" alt="Panasonic Lumix GH6">
+                <p class="camera-title">Panasonic Lumix GH6</p>
+                <p>25.2MP, 4K 120fps, Advanced Stabilization</p>
+                <p class="camera-price"><span class="discount">₹1,69,999</span> ₹1,49,999</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="product_id" value="005">
+                    <input type="hidden" name="name" value="Panasonic Lumix GH6">
+                    <input type="hidden" name="price" value="149999">
+                    <input type="hidden" name="image" value="static/images/camera5.jpg">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+    
+            <!-- Camera 6 -->
+            <div class="camera-item">
+                <img src="/static/images/camera6.jpeg" alt="Olympus OM-D E-M1 Mark III">
+                <p class="camera-title">Olympus OM-D E-M1 Mark III</p>
+                <p>20.4MP, Weather Sealed, High-Speed Shooting</p>
+                <p class="camera-price"><span class="discount">₹1,49,999</span> ₹1,29,999</p>
+                <form action="/add_to_cart" method="post">
+                    <input type="hidden" name="product_id" value="006">
+                    <input type="hidden" name="name" value="Olympus OM-D E-M1 Mark III">
+                    <input type="hidden" name="price" value="129999">
+                    <input type="hidden" name="image" value="static/images/camera6.jpg">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+<!-- Featured Cameras Section -->
+<section>
+    
+
+    <!-- Canon Cameras -->
+    <h2>Canon Cameras</h2>
+    <div class="camera-container">
+        <!-- Canon 1 -->
+        <div class="camera-item">
+            <img src="/static/images/camera7.webp" alt="Canon EOS R6">
+            <p class="camera-title">Canon EOS R6</p>
+            <p>20.1MP, Full-frame, 4K Video</p>
+            <p class="camera-price"><span class="discount">₹2,39,999</span> ₹2,14,999</p>
+            <form action="/add_to_cart" method="post">
+                <input type="hidden" name="product_id" value="canon001">
+                <input type="hidden" name="name" value="Canon EOS R6">
+                <input type="hidden" name="price" value="214999">
+                <input type="hidden" name="image" value="static/images/canon_eos_r6.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Canon 2 -->
+        <div class="camera-item">
+            <img src="/static/images/camera8.webp" alt="Canon EOS 90D">
+            <p class="camera-title">Canon EOS 90D</p>
+            <p>32.5MP, 4K Video, Dual Pixel AF</p>
+            <p class="camera-price"><span class="discount">₹1,29,999</span> ₹1,14,999</p>
+            <form action="/add_to_cart" method="post">
+                <input type="hidden" name="product_id" value="canon002">
+                <input type="hidden" name="name" value="Canon EOS 90D">
+                <input type="hidden" name="price" value="114999">
+                <input type="hidden" name="image" value="static/images/canon_eos_90d.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Canon 3 -->
+        <div class="camera-item">
+            <img src="/static/images/camera9.jpeg" alt="Canon EOS M50">
+            <p class="camera-title">Canon EOS M50 Mark II</p>
+            <p>24.1MP, 4K Video, Compact</p>
+            <p class="camera-price"><span class="discount">₹64,999</span> ₹54,999</p>
+            <form action="/add_to_cart" method="post">
+                <input type="hidden" name="product_id" value="canon003">
+                <input type="hidden" name="name" value="Canon EOS M50 Mark II">
+                <input type="hidden" name="price" value="54999">
+                <input type="hidden" name="image" value="static/images/canon_eos_m50.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Canon 4 -->
+        <div class="camera-item">
+            <img src="/static/images/camera10.jpg" alt="Canon PowerShot G7X">
+            <p class="camera-title">Canon PowerShot G7X Mark III</p>
+            <p>20.1MP, 4K Video, Vlogging</p>
+            <p class="camera-price"><span class="discount">₹77,999</span> ₹69,999</p>
+            <form action="/add_to_cart" method="post">
+                <input type="hidden" name="product_id" value="canon004">
+                <input type="hidden" name="name" value="Canon PowerShot G7X Mark III">
+                <input type="hidden" name="price" value="69999">
+                <input type="hidden" name="image" value="static/images/canon_powershot_g7x.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Canon 5 -->
+        <div class="camera-item">
+            <img src="{{ url_for('static', filename='images/canon_eos_r3.jpg') }}" alt="Canon EOS R3">
+            <p class="camera-title">Canon EOS R3</p>
+            <p>24.1MP, Full-frame, Professional</p>
+            <p class="camera-price"><span class="discount">₹4,99,999</span> ₹4,79,999</p>
+            <form action="/add_to_cart" method="post">
+                <input type="hidden" name="product_id" value="canon005">
+                <input type="hidden" name="name" value="Canon EOS R3">
+                <input type="hidden" name="price" value="479999">
+                <input type="hidden" name="image" value="static/images/canon_eos_r3.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Nikon Cameras -->
+    <h2>Nikon Cameras</h2>
+    <div class="camera-container">
+        <!-- Nikon 1 -->
+        <div class="camera-item">
+            <img src="{{ url_for('static', filename='images/nikon_z9.jpg') }}" alt="Nikon Z9">
+            <p class="camera-title">Nikon Z9</p>
+            <p>45.7MP, 8K Video, Flagship</p>
+            <p class="camera-price"><span class="discount">₹4,99,999</span> ₹4,74,999</p>
+            <form action="/add_to_cart" method="post">
+                <input type="hidden" name="product_id" value="nikon001">
+                <input type="hidden" name="name" value="Nikon Z9">
+                <input type="hidden" name="price" value="474999">
+                <input type="hidden" name="image" value="static/images/nikon_z9.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Nikon 2 -->
+        <div class="camera-item">
+            <img src="{{ url_for('static', filename='images/nikon_d850.jpg') }}" alt="Nikon D850">
+            <p class="camera-title">Nikon D850</p>
+            <p>45.7MP, 4K Video, Advanced DSLR</p>
+            <p class="camera-price"><span class="discount">₹2,79,999</span> ₹2,59,999</p>
+            <form action="/add_to_cart" method="post">
+                <input type="hidden" name="product_id" value="nikon002">
+                <input type="hidden" name="name" value="Nikon D850">
+                <input type="hidden" name="price" value="259999">
+                <input type="hidden" name="image" value="static/images/nikon_d850.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Nikon 3 -->
+        <div class="camera-item">
+            <img src="{{ url_for('static', filename='images/nikon_z6.jpg') }}" alt="Nikon Z6">
+            <p class="camera-title">Nikon Z6 II</p>
+            <p>24.5MP, Full-frame, Video Friendly</p>
+            <p class="camera-price"><span class="discount">₹1,99,999</span> ₹1,79,999</p>
+            <form action="/add_to_cart" method="post">
+                <input type="hidden" name="product_id" value="nikon003">
+                <input type="hidden" name="name" value="Nikon Z6 II">
+                <input type="hidden" name="price" value="179999">
+                <input type="hidden" name="image" value="static/images/nikon_z6.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Nikon 4 -->
+        <div class="camera-item">
+            <img src="{{ url_for('static', filename='images/nikon_z50.jpg') }}" alt="Nikon Z50">
+            <p class="camera-title">Nikon Z50</p>
+            <p>20.9MP, Compact Mirrorless, 4K Video</p>
+            <p class="camera-price"><span class="discount">₹89,999</span> ₹79,999</p>
+            <form action="/add_to_cart" method="post">
+                <input type="hidden" name="product_id" value="nikon004">
+                <input type="hidden" name="name" value="Nikon Z50">
+                <input type="hidden" name="price" value="79999">
+                <input type="hidden" name="image" value="static/images/nikon_z50.jpg">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Nikon 5 -->
+        <div class="camera-item">
+            <img src="{{ url_for('static', filename='images/nikon_d7500.jpg') }}" alt="Nikon D7500">
+            <p class="camera-title">Nikon D7500</p>
+            <p>209MP, 4K Video, Enthusiast DSLR</p> 
+            <p class="camera-price"><span class="discount">₹1,04,999</span> ₹94,999</p>
+             <form action="/add_to_cart" method="post"> <input type="hidden" name="product_id" value="nikon005"> <input type="hidden" name="name" value="Nikon D7500"> <input type="hidden" name="price" value="94999"> 
+                <input type="hidden" name="image" value="static/images/nikon_d7500.jpg"> <button type="submit">Add to Cart</button> </form> </div> </div>
+
+        </section>
