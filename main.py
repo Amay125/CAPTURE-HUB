@@ -30,7 +30,8 @@ def initialize_cart():
 # Home Route
 @app.route('/')
 def home():
-    return render_template('homepage.html')
+    success_message = session.pop('success_message', None)
+    return render_template('homepage.html', success_message=success_message)
 
 # Cinematography Cameras Route
 @app.route('/cinematography')
@@ -105,6 +106,9 @@ def add_to_cart():
 # Cart Route
 @app.route('/cart')
 def cart():
+    if 'user_id' not in session:
+        return redirect(url_for('login', next=url_for('cart')))
+
     pending_cart_item = session.pop('pending_cart_item', None)
     if pending_cart_item:
         session['cart'].append(pending_cart_item)
@@ -155,106 +159,13 @@ def checkout():
             finally:
                 connection.close()
 
-        receipt = {
-            'transaction_id': 'TX' + str(random.randint(100000, 999999)),
-            'total': total,
-            'address': address,
-            'contact': contact,
-            'payment_method': 'Cash',
-            'cart': cart
-        }
-
-        session['receipt'] = receipt  # Store receipt in session
+        session['success_message'] = "Order placed successfully!"
         session['cart'] = []
         session.modified = True
 
-        return redirect(url_for('receipt'))
+        return redirect(url_for('home'))
 
     return render_template('checkout.html', cart=cart, total=total)
-
-# Receipt Route
-@app.route('/receipt')
-def receipt():
-    # Assuming the receipt data is stored in the session after a successful payment
-    receipt = session.get('receipt', None)
-    if not receipt:
-        return redirect(url_for('cart'))
-    return render_template('receipt.html', receipt=receipt)
-
-# Dashboard Route
-@app.route('/dashboard')
-def dashboard():
-    if 'user_id' not in session:
-        return redirect(url_for('login', next=url_for('dashboard')))
-
-    user_id = session['user_id']
-    connection = get_db_connection()
-    if connection:
-        cursor = connection.cursor(dictionary=True)
-        cursor.execute("SELECT * FROM users WHERE id = %s", (user_id,))
-        user = cursor.fetchone()
-
-        cursor.execute("SELECT o.id, o.total_amount, o.address, o.contact, o.payment_method, o.transaction_id, o.created_at, GROUP_CONCAT(oi.product_id, ':', oi.quantity, ':', oi.price SEPARATOR ';') as items FROM orders o JOIN order_items oi ON o.id = oi.order_id WHERE o.user_id = %s GROUP BY o.id", (user_id,))
-        orders = cursor.fetchall()
-
-        for order in orders:
-            order['items'] = [{'product_id': int(item.split(':')[0]), 'quantity': int(item.split(':')[1]), 'price': float(item.split(':')[2])} for item in order['items'].split(';')]
-
-        connection.close()
-    else:
-        user = None
-        orders = []
-
-    return render_template('dashboard.html', user=user, orders=orders)
-
-# Admin Login Route
-@app.route('/admin_login', methods=['GET', 'POST'])
-def admin_login():
-    if request.method == 'POST':
-        email = request.form['email']
-        password = request.form['password']
-
-        # Database logic to authenticate admin user
-        connection = get_db_connection()
-        if connection:
-            cursor = connection.cursor(dictionary=True)
-            try:
-                query = "SELECT * FROM users WHERE email = %s AND password = %s"
-                cursor.execute(query, (email, password))
-                user = cursor.fetchone()
-                if user:
-                    session['admin_id'] = user['id']  # Store admin ID in session
-                    return redirect(url_for('admin_dashboard'))  # Redirect to admin dashboard after login
-                else:
-                    return "Invalid email or password."
-            except mysql.connector.Error as err:
-                print(f"Error: {err}")
-                return "An error occurred. Please try again."
-            finally:
-                connection.close()
-
-    return render_template('admin_login.html')
-
-# Admin Dashboard Route
-@app.route('/admin_dashboard')
-def admin_dashboard():
-    if 'admin_id' not in session:
-        return redirect(url_for('admin_login'))
-
-    connection = get_db_connection()
-    if connection:
-        cursor = connection.cursor(dictionary=True)
-        cursor.execute("SELECT o.id, o.total_amount, o.address, o.contact, o.payment_method, o.transaction_id, o.created_at, GROUP_CONCAT(oi.product_id, ':', oi.quantity, ':', oi.price SEPARATOR ';') as items FROM orders o JOIN order_items oi ON o.id = oi.order_id GROUP BY o.id")
-        orders = cursor.fetchall()
-
-        for order in orders:
-            order['items'] = [{'product_id': int(item.split(':')[0]), 'quantity': int(item.split(':')[1]), 'price': float(item.split(':')[2])} for item in order['items'].split(';')]
-
-        connection.close()
-    else:
-        orders = []
-
-    return render_template('admin_dashboard.html', orders=orders)
 
 # Signup Route
 @app.route('/signup', methods=['GET', 'POST'])
