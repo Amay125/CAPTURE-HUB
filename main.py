@@ -1,13 +1,9 @@
 from flask import Flask, render_template, url_for, request, redirect, session, jsonify
 import random
 import mysql.connector  # For database connection
-import stripe
 
 app = Flask(__name__)
-scss(app)
-
-# Set your Stripe secret key
-stripe.api_key = 'sk_test_51QkJsDRxZJyYZLXmVstJI7TBlPxiGH5q62ccQnVwy59v24Syp7Y2t0vo4bXDTW0MJB93VmnMoE8UBLJ6OhfptPVT004MOTCjEj'
+# scss(app)  # Commented out as it's not defined in the provided code
 
 # Database Connection Function
 def get_db_connection():
@@ -127,35 +123,6 @@ def remove_from_cart():
     session.modified = True
     return redirect(url_for('cart'))
 
-# Create Checkout Session Route
-@app.route('/create-checkout-session', methods=['POST'])
-def create_checkout_session():
-    data = request.get_json()
-    cart = session.get('cart', [])
-    total = sum(item['price'] for item in cart)
-
-    stripe_checkout_session = stripe.checkout.Session.create(
-        payment_method_types=['card'],
-        line_items=[{
-            'price_data': {
-                'currency': 'inr',  # Change currency to INR
-                'product_data': {
-                    'name': item['name'],
-                },
-                'unit_amount': int(item['price'] * 100),  # Stripe expects amount in smallest currency unit (paisa for INR)
-            },
-            'quantity': 1,
-        } for item in cart],
-        mode='payment',
-        success_url=url_for('receipt', _external=True),
-        cancel_url=url_for('cart', _external=True),
-        metadata={
-            'address': data['address'],
-            'contact': data['contact']
-        }
-    )
-    return jsonify({'id': stripe_checkout_session.id})
-
 # Checkout Route
 @app.route('/checkout', methods=['GET', 'POST'])
 def checkout():
@@ -175,7 +142,7 @@ def checkout():
             cursor = connection.cursor()
             try:
                 cursor.execute("INSERT INTO orders (user_id, total_amount, address, contact, payment_method, transaction_id) VALUES (%s, %s, %s, %s, %s, %s)",
-                               (session['user_id'], total, address, contact, 'Stripe', 'TX' + str(random.randint(100000, 999999))))
+                               (session['user_id'], total, address, contact, 'Cash', 'TX' + str(random.randint(100000, 999999))))
                 order_id = cursor.lastrowid
                 for item in cart:
                     cursor.execute("INSERT INTO order_items (order_id, product_id, quantity, price) VALUES (%s, %s, %s, %s)",
@@ -192,7 +159,7 @@ def checkout():
             'total': total,
             'address': address,
             'contact': contact,
-            'payment_method': 'Stripe',
+            'payment_method': 'Cash',
             'cart': cart
         }
 
