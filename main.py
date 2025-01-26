@@ -1,9 +1,10 @@
 from flask import Flask, render_template, url_for, request, redirect, session, jsonify
 import random
 import mysql.connector  # For database connection
+import os
 
 app = Flask(__name__)
-# scss(app)  # Commented out as it's not defined in the provided code
+app.secret_key = os.getenv('FLASK_SECRET_KEY', 'your_default_secret_key')
 
 # Database Connection Function
 def get_db_connection():
