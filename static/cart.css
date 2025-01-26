@@ -1,0 +1,129 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2e2e2e; /* Greyish black */
+    color: #eaeaea; /* Light grey text */
+}
+
+/* Header Styling */
+header {
+    background-color: #1f1f1f; /* Slightly darker grey */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #444;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #eaeaea;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #444;
+}
+
+/* Section Styling */
+section {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #1f1f1f; /* Darker grey */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Cart Items List */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: #2e2e2e;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+li:hover {
+    background-color: #383838;
+}
+
+li p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #eaeaea;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    text-align: center;
+    background-color: #5a5a5a; /* Muted grey button */
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+/* Empty Cart Message */
+section p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #cfcfcf; /* Lighter grey */
+}
+
+section p a {
+    color: #79a9ff; /* Highlighted blue for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+section p a:hover {
+    color: #537fc1;
+}

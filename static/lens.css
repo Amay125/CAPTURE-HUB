@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Black background */
+    color: #f5f5f5; /* White text */
+}
+
+header {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #f5f5f5;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: #cccccc;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ffffff;
+}
+
+
+
+
+/* Main Styles */
+main {
+    padding: 20px;
+}
+
+.price-range {
+    margin-bottom: 30px;
+    background-color: #1a1a1a; /* Dark gray background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.price-range h3 {
+    color: #f5f5f5;
+    border-bottom: 2px solid #f5f5f5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Grid Layout for Lens Boxes */
+.lens-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-adjust columns */
+    gap: 20px;
+}
+
+.lens-box {
+    background-color: #242424; /* Slightly lighter gray for contrast */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.lens-box img {
+    max-width: 100%;
+    max-height: 200px; /* Adjust the max-height as per your design */
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+}
+
+.lens-box h3 {
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+.lens-box p {
+    margin: 5px 0;
+    color: #cccccc;
+}
+
+.lens-box .price {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.lens-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
+    background-color: #333333;
+}
+
+/* Popular Lenses Section */
+.popular-lenses {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.popular-lenses h2 {
+    color: #f5f5f5;
+    border-bottom: 2px solid #f5f5f5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.popular-lenses .interactive {
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.popular-lenses .interactive:hover {
+    background-color: #333333;
+    transform: translateY(-5px);
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .lens-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        gap: 15px;
+    }
+
+    .lens-box {
+        width: 100%;
+    }
+}
