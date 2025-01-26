@@ -4,7 +4,7 @@ import mysql.connector  # For database connection
 import stripe
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Required for session management
+scss(app)
 
 # Set your Stripe secret key
 stripe.api_key = 'sk_test_51QkJsDRxZJyYZLXmVstJI7TBlPxiGH5q62ccQnVwy59v24Syp7Y2t0vo4bXDTW0MJB93VmnMoE8UBLJ6OhfptPVT004MOTCjEj'
