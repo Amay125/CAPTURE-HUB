@@ -300,7 +300,8 @@ def login():
                 user = cursor.fetchone()
                 if user:
                     session['user_id'] = user['id']  # Store user ID in session
-                    return redirect(url_for('home'))  # Redirect to home after login
+                    next_page = request.args.get('next', url_for('home'))
+                    return redirect(next_page)  # Redirect to the next page after login
                 else:
                     return "Invalid email or password."
             except mysql.connector.Error as err:
